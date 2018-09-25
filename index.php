@@ -7,6 +7,7 @@
     <title>Tienda Deportiva</title>
     <link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Lobster" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
 </head>
 <body>
     <div class="contenedor">
@@ -16,14 +17,14 @@
             </div>
 
             
-            <div class="navbar">
-                <a href="#" class="menu"><img src="./iconos/menu-de-lineas.png" alt="menu"></a>
+            <a href="#" class="menu"><img src="./iconos/menu-de-lineas.png" alt="menu"></a>
+            <div class="navbar menuOculto" id="navbar">
                 <nav class="linksNav">
-                    <a href="#">Inicio</a>
-                    <a href="#">Ingresar</a>
-                    <a href="#">Categorias</a>
-                    <a href="#">Contacto</a>
-                    <a href="#">Carro</a>
+                    <a href="#"><span class="icon-home3"></span> Inicio</a>
+                    <a href="#"><span class="icon-user"></span> Ingresar</a>
+                    <a href="#"><span class="icon-list"></span> Categorias</a>
+                    <a href="#"><span class="icon-address-book"></span> Contacto</a>
+                    <a href="#"><span class="icon-cart"></span> Carro</a>
                 </nav>
             </div>
         </header>
@@ -44,5 +45,17 @@
             </div>
         </footer>
     </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu").click(function(){
+                
+                    $("#navbar").toggleClass("menuDesplegado");
+                    $("#navbar").toggleClass("menuOculto");
+                    $("#navbar").removeClass("navbar");               
+            });
+        });
+    </script>
 </body>
 </html>
