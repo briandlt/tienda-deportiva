@@ -1,3 +1,8 @@
+:root {
+    --bg-navfoot: rgb(39, 0, 65);
+    --bg-body: rgba(39, 0, 65, 0.178);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -6,8 +11,7 @@
 
 .contenedor{
     width: 100%;
-    /* max-width: 1100px; */
-    background-color: #ccc;
+    background-color: var(--bg-body);
     margin: auto;
 
     display: flex;
@@ -18,7 +22,7 @@
 
 header{
     /* padding: 10px 20px; */
-    background-color: #304157;
+    background-color: var(--bg-navfoot);
     width: 100%;
 
     display: flex;
@@ -35,11 +39,6 @@ header .logo{
     text-decoration: none;
     color: white;
     font-size: 26px;
-}
-
-header .navbar{
-    display: flex;
-    align-items: center;
 }
 
 .menu{
@@ -62,12 +61,14 @@ header #navbar .linksNav{
     line-height: 51px;
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     padding: 0 10px;
 }
 
 .linksNav a:hover{
-    background-color: rgb(25, 172, 140);
+    background-color: #fff;
+    color: var(--bg-navfoot);
+    border-top: solid 2px var(--bg-navfoot);
 }
 
 .contenido{
@@ -78,7 +79,7 @@ header #navbar .linksNav{
 
 footer{
     width: 100%;
-    background-color: #304157;
+    background-color: var(--bg-navfoot);
     padding: 20px 0 10px;
 
     display: flex;
@@ -112,16 +113,9 @@ footer .sociales a{
 }
 
 @media screen and (max-width: 767px){
+    /* FOOTER Y NAVBAR */
     header .navbar{
-        display: none;
-    }
-
-    .menuDesplegado{
-        display: flex;
         width: 100%;
-    }
-
-    .menuOculto{
         display: none;
     }
 
@@ -130,22 +124,81 @@ footer .sociales a{
         width: 100%;
     }
 
+    .linksNav a{
+        border-bottom: solid 2px var(--bg-navfoot);
+    }
+
     .menu{
         margin-right: 20px;
         display: flex;
         align-items: center;
     }
+    /* FIN DE FOOTER Y NAVBAR */
+
 
 
 
 }
 
 @media screen and (min-width: 768px){
-    header .navbar{
-        display: flex;
+    /* FOOTER Y NAVBAR */
+    .navbar{
+        display: flex!important;
         align-items: center;
     }
+    /* FIN DE FOOTER Y NAVBAR */
     
 }
 
-/* TEMPLATES DEL NAVBAR Y EL FOOTER */
+/* FIN DE TEMPLATES DEL NAVBAR Y EL FOOTER */
+
+/* CONTENEDOR DE LOS PRODUCTOS PAG PRINCIPAL */
+
+#productosPrincipal{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px 35px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#productosPrincipal .producto{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    /* background-color: #ccc;    */
+}
+
+#productosPrincipal .producto a{
+    text-align: center;
+}
+
+#productosPrincipal .producto img{
+    width: 220px;
+}
+
+#productosPrincipal .producto .infoProduct{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: var(--bg-navfoot);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#productosPrincipal .producto .infoProduct a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* FIN CONTENEDOR DE LOS PRODUCTOS PAG PRINCIPAL */
