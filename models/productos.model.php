@@ -15,6 +15,34 @@
             $this->productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $this->productos;
         }
+
+        public function paginacion($categoria){
+
+            $query = 'SELECT * FROM PRODUCTOS WHERE CATEGORIA = ?';
+            $stmt = $this->conexion->prepare($query);
+            $stmt->bindParam(1, $categoria, PDO::PARAM_STR);
+            $stmt->execute();
+            $stmt->fetchAll();
+            $rows = $stmt->rowCount();
+            $this->numeroPaginas = ceil($rows / 9);
+
+            return $this->numeroPaginas;
+        }
+
+        public function categorias($categoria, $pagina){
+
+            $sizePag = 9;
+            $inicioPagina = ($pagina-1) * $sizePag;
+            $query = "SELECT * FROM PRODUCTOS WHERE CATEGORIA = ? LIMIT $inicioPagina, $sizePag";
+            $stmt = $this->conexion->prepare($query);
+            $stmt->bindParam(1, $categoria, PDO::PARAM_STR);
+            $stmt->execute();
+            $this->productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $this->productos;
+
+            
+        }
     }
 
 

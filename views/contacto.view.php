@@ -11,7 +11,7 @@
             <label for="email">E-mail:</label>
             <input type="text" name="email" id="email">
             <label for="mensaje">Mensaje:</label>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="7"></textarea>
             <input type="submit" value="Enviar">
         </form>
     </div>

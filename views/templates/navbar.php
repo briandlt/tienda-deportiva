@@ -24,13 +24,13 @@
                     <ul class="menu">
                         <li><a href="index.php"><span class="icon-home3"></span> Inicio</a></li>
                         <li><a href="#"><span class="icon-user"></span> Ingresar</a></li>
-                        <li class="catego"><a href="#"><span class="icon-list"></span> Categorias <span class="flecha icon-circle-down"></span></a>
+                        <li class="catego"><a><span class="icon-list"></span> Categorias <span class="flecha icon-circle-down"></span>
                             <div class="categorias">
                                 <ul class="submenu">
-                                    <li><a href="#">Futbol</a></li>
-                                    <li><a href="#">Basquetbol</a></li>
-                                    <li><a href="#">Beisbol</a></li>
-                                    <li><a href="#">Tenis</a></li>
+                                    <li><a href="controllers/categorias.controller.php?categoria=futbol&pagina=1">Futbol</a></li>
+                                    <li><a href="controllers/categorias.controller.php?categoria=basquetbol&pagina=1">Basquetbol</a></li>
+                                    <li><a href="controllers/categorias.controller.php?categoria=beisbol&pagina=1">Beisbol</a></li>
+                                    <li><a href="controllers/categorias.controller.php?categoria=tenis&pagina=1">Tenis</a></li>
                             
                                 </ul>
                             </div>

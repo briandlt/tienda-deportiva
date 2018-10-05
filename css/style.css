@@ -91,6 +91,10 @@ header .logo{
     line-height: 56px;
 }
 
+.menu .catego{
+    cursor: pointer;
+}
+
 .menu li > a{
     color: #fff;
     text-decoration: none;
@@ -238,6 +242,7 @@ footer .sociales a{
 #contenido{
     width: 90%;
     max-width: 1000px;
+    min-height: 550px;
     margin: 53px auto 0;
     padding: 10px 30px;
     background-color: #fff;
@@ -328,10 +333,37 @@ footer .sociales a{
     }
 }
 
-
+@media screen and (max-width: 515px){
+    #contenido{
+        width: 100%;
+    }
+}
 
 /* FIN CONTENEDOR DE LOS PRODUCTOS PAG PRINCIPAL */
 
+/* CONTENEDOR DE LA PAGINA DE CATEGORIAS */
+
+    .paginacion{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .paginacion > a{
+        padding: 5px 7px;
+        color: #fff;
+        height: 30px;
+        text-decoration: none;
+        background-color: rgb(187, 34, 34);
+        margin: 3px 3px 10px 3px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+}
+
+/* FIN DEL CONTENEDOR DE LA PAGINA DE CATEGORIAS */
 
 /* CONTENEDOR DE LA PAGINA DE CONTACTO */
 
@@ -364,6 +396,7 @@ footer .sociales a{
     background-color: #fff;
     padding: 6px;
     font-size: 16px;
+    resize: none;
     border-radius: 3px;
     font-family: 'Asap Condensed', sans-serif;
     -webkit-border-radius: 3px;
@@ -379,13 +412,12 @@ footer .sociales a{
     font-family: 'Asap Condensed', sans-serif;
     border: none;
     padding: 10px;
-
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .mapa{
     width: 60%;
-    margin: 20px 0;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -404,6 +436,26 @@ footer .sociales a{
     padding: 4px 0;
     font-family: 'Asap Condensed', sans-serif;
 
+}
+
+
+@media screen and (max-width: 880px){
+    #contenido .contacto{
+        width: 80%;
+    }
+    
+    #contenido .mapa{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 767px){
+    #contenido .contacto{
+        width: 100%;
+    }
+
+    #contenido .mapa{
+        width: 100%;
+    }
 }
 
 /* FIN DE CONTENEDOR DE LA PAGINA DE CONTACTO */

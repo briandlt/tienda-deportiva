@@ -9,8 +9,8 @@ $(document).ready(function () {
 
     // CATEGORIAS DESPLEGABLES //   
 
-    $(".menu li.catego").click(function (e) { 
-        e.preventDefault();
+    $(".menu li.catego").click(function (e) {
+        // e.preventDefault();
         $(".submenu").slideToggle();
         $(".menu li span.flecha").toggleClass('icon-circle-down');
         $(".menu li span.flecha").toggleClass('icon-circle-up');
