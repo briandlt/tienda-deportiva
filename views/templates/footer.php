@@ -11,27 +11,6 @@
     </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var oculto = true;
-            $(".menu").click(function(){
-
-                if(oculto == true){
-                    $("#navbar").css({
-                        "display": "block"
-                    });
-                    oculto = false;
-                }else{
-                    $("#navbar").css({
-                        "display": "none"
-                    });
-                    oculto = true;
-                }
-
-                //$("#navbar").slideToggle(500);
-            });
-
-        });
-    </script>
+    <script src="<?php echo SERVER ?>js/funciones.js"></script>
 </body>
 </html>

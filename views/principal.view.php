@@ -1,13 +1,13 @@
 <?php require('templates/navbar.php'); ?>
 
-<section id="productosPrincipal">
+<section id="contenido">
     <?php foreach($arrayProductos as $producto): ?>
     <div class="producto">
         <a href="#"><img src="<?php echo "imagenes/". $producto['imagen']; ?>" alt=""></a>
-        <div class="infoProduct">
+        <div class="infoProduct animated zoomIn">
             <a id="nameProduct" href=""><?php echo ucwords($producto['producto']); ?></a>
             <a href="#">$<?php echo $producto['precio']; ?>.00 MXN</a>
-            <a href=""><span class="icon-cart"></span></a>
+            <a class="iconCart" href=""><span class="icon-cart"></span></a>
         </div>
     </div>
     <?php endforeach; ?>
