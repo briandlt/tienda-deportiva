@@ -7,5 +7,6 @@
     $arrayProductos = $productos->categorias($categoria, $pagina);
     $numeroPaginas = $productos->paginacion($categoria);
     require_once('../views/categorias.view.php');
+    require_once('cuenta.controller.php');
 
 ?>

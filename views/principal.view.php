@@ -1,4 +1,4 @@
-<?php require('templates/navbar.php'); ?>
+<?php require_once('templates/navbar.php'); ?>
 
 <section id="contenido">
     <?php foreach($arrayProductos as $producto): ?>
@@ -13,4 +13,4 @@
     <?php endforeach; ?>
 </section>
 
-<?php require('templates/footer.php'); ?>
+<?php require_once('templates/footer.php'); ?>

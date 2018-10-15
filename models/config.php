@@ -6,7 +6,9 @@
     define('DB_PASS', '');
     define('DB_CHARSET', 'SET CHARACTER SET utf8');
 
+    // define('SERVER', $_SERVER['DOCUMENT_ROOT'].'/deportiva-responsive');
     define('SERVER', 'http://localhost/deportiva-responsive/');
+    define('RAIZ', $_SERVER['DOCUMENT_ROOT'].'/deportiva-responsive');
     define('CSS', SERVER.'css/');
     define('VIEWS', SERVER.'views/');
     define('CONTROLLERS', SERVER.'controllers/');

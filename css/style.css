@@ -12,6 +12,10 @@
             box-sizing: border-box;
 }
 
+body{
+    font-family: 'Asap Condensed', sans-serif;
+}
+
 .contenedor{
     width: 100%;
     background-color: var(--bg-body);
@@ -34,7 +38,7 @@
     font-size: 16px;
 }
 
-header{
+.headerTemplate{
     /* padding: 10px 20px; */
     background-color: var(--bg-primary);
     width: 100%;
@@ -53,7 +57,7 @@ header{
             justify-content: space-between;
 }
 
-header .logo{
+.headerTemplate .logo{
     padding: 10px 0 10px 20px;
     font-family: 'Lobster', cursive;
 }
@@ -179,7 +183,7 @@ footer .sociales a{
 
 @media screen and (max-width: 767px){
     /* FOOTER Y NAVBAR */
-    header .navbar{
+    .headerTemplate .navbar{
         width: 100%;
         display: none;
     }
@@ -459,3 +463,77 @@ footer .sociales a{
 }
 
 /* FIN DE CONTENEDOR DE LA PAGINA DE CONTACTO */
+
+/* ESTILOS DEL LOGIN */
+
+.sectionsLogin{
+    background-color: #fff;
+}
+
+.headerLogin{
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+}
+
+.headerLogin > .active{
+    background-color: var(--bg-optional);
+}
+
+.headerLogin > a{
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    padding: 15px;
+    border: 1px solid var(--bg-secundary);
+}
+
+.login{
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.login > form > input,
+.newAccount > form > input{
+    font-size: 15px;
+    padding: 12px;
+    margin: 8px 0;
+    color: var(--bg-primary);
+    border: 1px solid rgb(121, 120, 120);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.sectionsLogin input[type="submit"]{
+    background-color: var(--bg-primary);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input100{
+    width: 100%;
+}
+
+.input50{
+    width: 49%;
+}
+
+.newAccount{
+    width: 100%;
+    padding: 20px 30px;
+    display: none;
+}
+
+.sectionsLogin form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* FIN DE ESTILOS LOGIN */
