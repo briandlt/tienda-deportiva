@@ -40,8 +40,16 @@
             $this->productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             return $this->productos;
+        }
 
-            
+        public function detallesProducto($id){
+            $query = 'SELECT * FROM PRODUCTOS WHERE idProducto = ?';
+            $stmt = $this->conexion->prepare($query);
+            $stmt->bindParam(1, $id, PDO::PARAM_STR);
+            $stmt->execute();
+            $this->producto = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $this->producto;
         }
     }
 

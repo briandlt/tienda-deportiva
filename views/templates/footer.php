@@ -12,6 +12,8 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="<?php echo SERVER ?>js/funciones.js"></script>
+    <script src="<?php echo SERVER ?>js/validacionFormulario.js"></script>
+    <script src="<?php echo SERVER ?>toastr/toastr.min.js"></script>
     <script src="./iziModal-master/js/iziModal.min.js"></script>
 </body>
 </html>

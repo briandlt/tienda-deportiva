@@ -1,12 +1,12 @@
 <?php
 
-    require_once('../models/productos.model.php');
-    $categoria = $_GET['categoria'];
-    $pagina = $_GET['pagina'];
+    require_once('./models/productos.model.php');
+    $ruta = explode('/', $_GET['views']);
+    $categoria = $ruta[1];
+    $pagina = $ruta[2];
     $productos = new Productos;
     $arrayProductos = $productos->categorias($categoria, $pagina);
     $numeroPaginas = $productos->paginacion($categoria);
-    require_once('../views/categorias.view.php');
-    require_once('cuenta.controller.php');
+    require_once('./views/categorias.view.php');
 
 ?>
