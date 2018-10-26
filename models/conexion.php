@@ -6,7 +6,7 @@
 
         protected $conexion;
 
-        public function Conexion(){
+        public function __construct(){
             try{
                 $this->conexion = new PDO(DB_DSN, DB_USER, DB_PASS);
                 $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
