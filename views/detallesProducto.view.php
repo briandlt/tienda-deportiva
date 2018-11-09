@@ -7,8 +7,8 @@
         <div class="infoProducto">
             <p>Descripción: <?php echo ($producto['caracteristica1']); ?></p>
             <p id="nameProduct" href=""><?php echo ucwords($producto['producto']); ?></p>
-            <p href="#">$<?php echo $producto['precio']; ?>.00 MXN</p>
-            <a href=""><span class="icon-cart"></span></a>
+            <p href="#">$<?php echo number_format($producto['precio'],2); ?> MXN</p>
+            <a href="carro/<?php echo $producto['idProducto'] ?>"><span class="icon-cart"></span></a>
         </div>
     </div>
 </section>

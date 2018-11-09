@@ -12,17 +12,17 @@
     </section>
     <section class="newAccount">
         <form id="newAccount">
-            <input class="input50" type="text" name="nombre" placeholder="Nombre">
-            <input class="input50" type="text" name="apellido" placeholder="Apellido">
-            <input class="input50" type="text" name="telefono" placeholder="Teléfono">
-            <input class="input50" type="text" name="direccion" placeholder="Dirección">
-            <input class="input50" type="text" name="colonia" placeholder="Colonia">
-            <input class="input50" type="text" name="ciudad" placeholder="Ciudad">
-            <input class="input50" type="text" name="estado" placeholder="Estado">
-            <input class="input50" type="text" name="cp" placeholder="Código Postal">
-            <input class="input100" type="mail" name="mail" placeholder="Correo">
-            <input class="input50" type="password" name="pass1" placeholder="Contraseña">
-            <input class="input50" type="password" name="pass2" placeholder="Confirme Contraseña">
+            <input class="input50" type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <input class="input50" type="text" name="apellido" id="apellido" placeholder="Apellido">
+            <input class="input50" type="text" name="telefono" id="telefono" placeholder="Teléfono">
+            <input class="input50" type="text" name="direccion" id="direccion" placeholder="Dirección">
+            <input class="input50" type="text" name="colonia" id="colonia" placeholder="Colonia">
+            <input class="input50" type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
+            <input class="input50" type="text" name="estado" id="estado" placeholder="Estado">
+            <input class="input50" type="text" name="cp" id="cp" placeholder="Código Postal">
+            <input class="input100" type="mail" name="mail" id="mail" placeholder="Correo">
+            <input class="input50" type="password" name="pass1" id="pass1" placeholder="Contraseña">
+            <input class="input50" type="password" name="pass2" id="pass2" placeholder="Confirme Contraseña">
             <input id="btnAccount" type="submit" value="Crear Cuenta">
         </form>
     </section>

@@ -1,5 +1,4 @@
 <?php
-
     require('conexion.php');
 
     class Productos extends Conexion{
@@ -52,6 +51,4 @@
             return $this->producto;
         }
     }
-
-
 ?>

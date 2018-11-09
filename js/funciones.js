@@ -9,11 +9,18 @@ $(document).ready(function () {
 
     // CATEGORIAS DESPLEGABLES //   
 
+    $(".menu li.opcUser").click(function (e) {
+        // e.preventDefault();
+        $(".opcUser .submenu").slideToggle();
+        $(".opcUser span.flecha").toggleClass('icon-circle-down');
+        $(".opcUser span.flecha").toggleClass('icon-circle-up');
+    });
+
     $(".menu li.catego").click(function (e) {
         // e.preventDefault();
-        $(".submenu").slideToggle();
-        $(".menu li span.flecha").toggleClass('icon-circle-down');
-        $(".menu li span.flecha").toggleClass('icon-circle-up');
+        $(".catego .submenu").slideToggle();
+        $(".catego span.flecha").toggleClass('icon-circle-down');
+        $(".catego span.flecha").toggleClass('icon-circle-up');
     });
 
     // MODAL DE LOGIN //

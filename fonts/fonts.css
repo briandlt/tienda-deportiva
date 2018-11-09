@@ -24,7 +24,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-home3:before {
+.icon-home:before {
   content: "\e902";
 }
 .icon-cart:before {
@@ -36,8 +36,23 @@
 .icon-user:before {
   content: "\e971";
 }
+.icon-delete:before {
+  content: "\e9ac";
+}
 .icon-list:before {
   content: "\e9ba";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
 }
 .icon-circle-up:before {
   content: "\ea41";

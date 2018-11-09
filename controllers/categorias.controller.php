@@ -1,7 +1,5 @@
 <?php
 
-    require_once('./models/productos.model.php');
-    $ruta = explode('/', $_GET['views']);
     $categoria = $ruta[1];
     $pagina = $ruta[2];
     $productos = new Productos;

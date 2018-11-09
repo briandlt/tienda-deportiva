@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="<?php echo CSS ?>style.css">
     <link rel="stylesheet" href="<?php echo SERVER ?>fonts/fonts.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
-    <link rel="stylesheet" href="<?php echo SERVER ?>iziModal-master/css/iziModal.min.css">
-    <link rel="stylesheet" href="<?php echo SERVER ?>toastr/toastr.min.css">
+    <link rel="stylesheet" href="<?php echo CSS ?>iziModal.min.css">
+    <link rel="stylesheet" href="<?php echo CSS ?>toastr.min.css">
 </head>
 <body>
     <div class="contenedor">
@@ -24,8 +24,18 @@
             <div class="navbar" id="navbar">
                 <nav class="linksNav animated bounce">
                     <ul class="menu">
-                        <li><a href="home"><span class="icon-home3"></span> Inicio</a></li>
-                        <li id="sesion"><a href="#"><span class="icon-user"></span> Ingresar</a></li>
+                        <li><a href="home"><span class="icon-home"></span> Inicio</a></li>
+                        <?php if(!isset($_SESSION['usuario'])){ ?>
+                            <li id="sesion"><a href="#"><span class="icon-user"></span> Ingresar</a></li>
+                        <?php }else{ ?>
+                            <li class="opcUser"><a><span class="icon-user"></span> <?php echo $_SESSION['usuario']; ?> <span class="flecha icon-circle-down"></span>
+                                <div class="categorias">
+                                    <ul class="submenu">
+                                        <li><a href="cerrarSesion">Cerrar Sesion</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        <?php } ?>
                         <li class="catego"><a><span class="icon-list"></span> Categorias <span class="flecha icon-circle-down"></span>
                             <div class="categorias">
                                 <ul class="submenu">
@@ -38,10 +48,10 @@
                             </div>
                         </li>
                         <li><a href="contacto"><span class="icon-address-book"></span> Contacto</a></li>
-                        <li class="link"><a href="#"><span class="icon-cart"></span> Carrito</a></li>
+                        <li class="link"><a href="carro"><span class="icon-cart"></span> Carrito</a></li>
                     </ul>
                     
                 </nav>
             </div>
         </header>
-        <?php require_once(RAIZ.'/controllers/cuenta.controller.php') ?>
+        <?php require_once('./views/cuenta.view.php'); ?>
