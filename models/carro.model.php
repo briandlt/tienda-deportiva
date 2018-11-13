@@ -3,16 +3,18 @@
 
     class Carro extends Conexion{
 
+        private $stmt;
+
         public function Carro(){
             parent::__construct();
         }
 
         public function agregarProducto($id){
             $query = "SELECT * FROM productos WHERE idProducto = ?";
-            $stmt = $this->conexion->prepare($query);
-            $stmt->bindParam(1, $id, PDO::PARAM_INT);
-            $stmt->execute();
-            $producto = $stmt->fetch(PDO::FETCH_ASSOC);
+            $this->stmt = $this->conexion->prepare($query);
+            $this->stmt->bindParam(1, $id, PDO::PARAM_INT);
+            $this->stmt->execute();
+            $producto = $this->stmt->fetch(PDO::FETCH_ASSOC);
 
             if(empty($_SESSION['carro'])){
                 $_SESSION['carro'] = array(array('idProducto' => $producto['idProducto'],
@@ -44,7 +46,6 @@
                 }
             }
             $_SESSION['carro'] = $carro;
-            return $_SESSION['carro'];
         }
 
         public function eliminarProducto($id){
@@ -63,8 +64,8 @@
             }
             $_SESSION['carro'] = $nuevoCarro;
 
-            $response = json_encode($_SESSION['carro']);
-            echo $response;
+            $respuesta = json_encode($_SESSION['carro']);
+            echo $respuesta;
         }
 
         public function actualizarCarro($id, $operacion){
@@ -89,8 +90,12 @@
             }
             $_SESSION['carro'] = $carro;
 
-            $response = json_encode($_SESSION['carro']);
-            echo $response;
+            $respuesta = json_encode($_SESSION['carro']);
+            echo $respuesta;
+        }
+
+        public function __destruct(){
+            parent::close($this->stmt);
         }
     }
 ?>

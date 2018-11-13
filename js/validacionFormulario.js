@@ -28,6 +28,7 @@ $(document).ready(function () {
                 // url: "controllers/cuenta.controller.php",
                 data: {user, pass},
                 success: function (response) {
+                    console.log(response);
                     if(!response.error) {
                         let logueo = (response);
                         if(logueo == 'Usuario incorrecto'){

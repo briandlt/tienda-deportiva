@@ -1,7 +1,7 @@
 <?php require_once('templates/navbar.php'); ?>
 
 <section id="contenidoCarro">
-    <?php if(!empty($_SESSION['carro'])){ ?>
+    <?php if(!empty($_SESSION['carro'])): ?>
         <div>
             <h1 class="titleCar">Carro de compras</h1>
             <table class="carrito">
@@ -36,12 +36,12 @@
         <section class="total">
             <p>Total <br/><span class="precioTotal">$<?php echo number_format($total,2); ?></span> MXN</p>
         </section>
-    <?php }else{ ?>
+    <?php else: ?>
         <h1 class='emptyCar'>No hay articulos en el carro de compras</h1>
         <div class='carroVacio'>
             <img src='./imagenes/logos/carro-vacio.png' alt='carro de compras vacio'>
         </div>
-    <?php } ?>
+    <?php endif; ?>
 </section>
 
 <?php require_once('templates/footer.php'); ?>
