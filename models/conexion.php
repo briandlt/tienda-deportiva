@@ -43,8 +43,8 @@
         }
 
         public function close($stmt){
-            $stmt -> closeCursor();
-            $stmt = "";
+            $stmt->closeCursor();
+            $stmt = null;
         }
     }
 
